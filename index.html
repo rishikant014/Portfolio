@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif; /* Updated to Playfair Display */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(90deg, #fff7ad, #ffa9f9); /* Gradient for the whole page */
+            height: 100%;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh; /* Full height of the screen */
+            background: url('Rishi.gif') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about, .contact, .research, .education {
+            background-color: transparent; /* Transparent background for sections */
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 350px; /* Adjust as per your preferred image size */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 2;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+        }
+
+        .about-text p {
+            margin: 0;
+        }
+
+        /* Education Section */
+        .education div {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .education h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .education h4 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        .education a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .education a:hover {
+            text-decoration: underline;
+        }
+
+        /* Research Papers Section */
+        .research .research-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .research .research-item {
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .research .research-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .research .research-item iframe {
+            width: 100%;
+            height: 300px; /* Reduced height */
+            border: none;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+        }
+
+        .contact form button {
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <!-- Removed the text inside the hero section -->
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about" id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="C:/Users/LENOVO/Desktop/Website/Photo.jpeg" alt="Your Photo" class="about-photo">
+            </div>
+            <div class="about-text">
+                <p>
+                    Rishikant is a dedicated data science professional with a strong academic foundation in Computer Science and Communication Engineering, currently pursuing a Master's degree in Data Science. With 2 months of experience at ONGC, Rishikant has gained valuable insights into the petroleum sector, focusing on data analysis and contributing to operational efficiency. Although relatively new to the industry, Rishikant has quickly adapted and is committed to learning and applying innovative solutions to real-world challenges.
+
+An avid learner, Rishikant enjoys exploring new tools and technologies, staying ahead of trends in the rapidly evolving field of data science. With a solid background in training, mentoring, and a focus on safety, Rishikant is passionate about leveraging AI, machine learning, and data science to drive business improvements and optimize industry practices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <h2>Education</h2>
+        <div>
+            <h3><a href="https://kiit.ac.in/" target="_blank">Kalinga Institute of Industrial Technology, Bhubaneswar, Odisha</a></h3>
+            <p>Graduated in 2024</p>
+            <h4>Bachelor of Technology (B.Tech) in Computer Science and Communication Engineering</h4>
+        </div>
+        <div>
+            <h3><a href="https://www.aitpune.com/" target="_blank">Army Institute of Technology, Pune, Maharashtra</a></h3>
+            <p>Expected Graduation in 2026</p>
+            <h4>Master of Engineering (M.E.) in Data Science</h4>
+        </div>
+    </section>
+
+    <!-- Research Papers Section -->
+    <section class="section research" id="research">
+        <h2>Research Papers</h2>
+        <div class="research-list">
+            <div class="research-item">
+                <h3>Research Paper 1</h3>
+                <p>This paper focuses on Feature Analysis. It was published in IEEE in 2023.</p>
+                <iframe src="https://drive.google.com/file/d/1DuoLMazfVhMvHNunwglu62axZ9aYGDOh/preview"></iframe>
+            </div>
+            <div class="research-item">
+                <h3>Research Paper 2</h3>
+                <p>This paper discusses Intrusion detection. It was published in IEEE in 2023.</p>
+                <iframe src="https://drive.google.com/file/d/1T263ybLnRTnEy48D6VTwsAOJXiZFEJMa/preview"></iframe>
+            </div>
+            <div class="research-item">
+                <h3>Research Paper 3</h3>
+                <p>This paper presents Explainable Machine Learning. It was published in IEEE in 2023.</p>
+                <iframe src="https://drive.google.com/file/d/1xHHu_vQgih1guJMa2nWW2Mrdi-WhtMDG/preview"></iframe>
+            </div>
+            <div class="research-item">
+                <h3>Research Paper 4</h3>
+                <p>This paper explores Explainable Artificial Intelligence. It was published in Utkal University Journal of Computing & Communication in 2022.</p>
+                <iframe src="https://drive.google.com/file/d/1r7f4V0Yg7fGoOnm3Qo9tsQiRx5mr0MHv/preview"></iframe>
+            </div>
+            <div class="research-item">
+                <h3>Research Paper 5</h3>
+                <p>This paper covers Big Data in Well Log Analysis. It was published in Society of Petroleum Geologists in 2024.</p>
+                <iframe src="https://drive.google.com/file/d/1A1SZVo5EGaXWsDS-s-ojP5K423oyt7x9/preview"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to collaborate, feel free to reach out through the form below.</p>
+        <form action="#" method="post">
+            <input name="name" placeholder="Your Name" required="" type="text">
+            <input name="email" placeholder="Your Email" required="" type="email">
+            <textarea name="message" placeholder="Your Message" required="" rows="5"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    
+</body>
+</html>
