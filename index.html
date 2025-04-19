@@ -191,9 +191,88 @@
         footer p {
             margin: 0;
         }
+
+
+        /* pet section */
+
+        /* Compact Vertical Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      width: 40px;
+      height: 140px;
+      background-color: #333;
+      color: white;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      padding: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Pet container */
+    .pet-container {
+      position: fixed;
+      top: 50%;
+      left: 60px;
+      transform: translateY(-50%);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .pet-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .hover-text {
+      font-weight: bold;
+      color: #333;
+    }
+
     </style>
 </head>
 <body>
+
+    <!-- Compact Vertical Sidebar -->
+  <div class="sidebar" onclick="showPet()">
+    Click to see my pet
+  </div>
+
+  <!-- Pet Display Container -->
+  <div class="pet-container" id="petContainer">
+    <div class="hover-text">Hover to pet</div>
+    <img 
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJ3d2dpZDMybmQzd2E1bHFucW1uY3V0NTZrOGFnN3Q1em93cGQ5eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LkfG4aqCjm8WC9YjTC/giphy.gif" 
+      id="petGif"
+      onmouseover="changeGif(true)" 
+      onmouseout="changeGif(false)" 
+      alt="Pet GIF" 
+    />
+  </div>
+
+
+
 
     <header>
         <nav>
@@ -288,6 +367,26 @@ An avid learner, Rishikant enjoys exploring new tools and technologies, staying 
             <button type="submit">Send Message</button>
         </form>
     </section>
+
+    <script>
+        const petContainer = document.getElementById('petContainer');
+        const petGif = document.getElementById('petGif');
+      
+        const stillGif = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJ3d2dpZDMybmQzd2E1bHFucW1uY3V0NTZrOGFnN3Q1em93cGQ5eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LkfG4aqCjm8WC9YjTC/giphy.gif";
+        const movingGif = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnJ3d2dpZDMybmQzd2E1bHFucW1uY3V0NTZrOGFnN3Q1em93cGQ5eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LkfG4aqCjm8WC9YjTC/giphy.gif";
+      
+        function showPet() {
+          if (petContainer.style.display === "flex") {
+            petContainer.style.display = "none";
+          } else {
+            petContainer.style.display = "flex";
+          }
+        }
+      
+        function changeGif(isHover) {
+          petGif.src = isHover ? movingGif : stillGif;
+        }
+      </script>
 
     
 </body>
